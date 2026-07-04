@@ -107,16 +107,4 @@ src/paperlens/
   tensorflow_features.py TensorFlow-backed feature processor
 ```
 
-## Notes
 
-PaperLens keeps the core small and dependency-light. PDF, OCR, and TensorFlow
-support are optional extras, so the package can run in constrained deployment
-environments and grow as needed.
-
-The TensorFlow step runs in an isolated worker process. That means a broken local
-TensorFlow native install returns a clean CLI/API error instead of crashing the
-main PaperLens process.
-
-## License
-
-MIT
