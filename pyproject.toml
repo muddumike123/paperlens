@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paperlens"
+version = "0.1.0"
+description = "Lightweight document intelligence pipeline for PDFs, images, and text."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "PaperLens Contributors" }]
+keywords = ["document-ai", "ocr", "pdf", "nlp", "document-processing"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+  "pydantic>=2.7",
+]
+
+[project.optional-dependencies]
+api = ["fastapi>=0.111", "uvicorn[standard]>=0.30", "python-multipart>=0.0.9"]
+pdf = ["pypdf>=4.2"]
+ocr = ["pillow>=10.3", "pytesseract>=0.3.10"]
+ml = ["tensorflow>=2.16"]
+dev = ["pytest>=8.2", "ruff>=0.5", "mypy>=1.10", "httpx>=0.27"]
+
+[project.scripts]
+paperlens = "paperlens.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_unused_ignores = true
+warn_return_any = true
+packages = ["paperlens"]

@@ -1,0 +1,14 @@
+ACME CONSULTING
+Invoice: INV-2026-0715
+Date: 2026-07-01
+
+Bill To: Riverfront Labs
+Email: finance@riverfront.example
+Phone: +1 555 202 0199
+
+Description              Qty      Total
+Discovery workshop       1        $1,200.00
+Prototype build          1        $4,800.00
+
+Total Due: $6,000.00
+Payment URL: https://pay.example/invoices/INV-2026-0715
