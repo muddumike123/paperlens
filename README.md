@@ -1,13 +1,4 @@
-# PaperLens
-
-PaperLens is a lightweight document classifier for uploaded PDFs, images, and
-plain text files. It extracts text, scores likely document classes, and returns a
-clear answer such as invoice, resume, contract, receipt, report, OCR scan, or
-unknown.
-
-It is designed as a compact, GitHub-ready project inspired by document analysis
-frameworks: pipeline-based processing, typed data models, CLI usage, an optional
-FastAPI service, tests, Docker, and CI.
+# PaperLens by Saaketh Mudunuri
 
 ## Features
 
